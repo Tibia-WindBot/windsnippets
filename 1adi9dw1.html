@@ -147,18 +147,9 @@
 			<div id="body-container" class="container z-depth-2" style="height: 110%; ">
 				<form class="col s12" style="margin-top: 20px">
 					<div class="row">
-						<div class="input-field col s9" style="margin-top: 25px">
+						<div class="input-field col s12" style="margin-top: 25px">
 							<i class="mdi-action-label-outline prefix"></i>
-							<input id="snippetname" type="text" size="20" style="text-color: inherit">
-							<label for="text">Snippet Name</label>
-						</div>
-						<div class="input-field col s3 right" style="margin-top: 25px">
-							<form action="#">
-								<p>
-									<input type="checkbox" id="private-snippet" checked="checked" />
-									<label for="test6" class="tooltipped" data-position="bottom" data-delay="5" data-tooltip="All your snippets are private for now.">Private Snippet</label>
-								</p>
-							</form>
+							<h6 class="input-field center">Untitled Snippet</h6>
 						</div>
 					</div>
 				</form>
@@ -198,9 +189,9 @@ if $cap <= minCap and flasks() >= randMinAmount then
 end</div>
 
 				<div class="center" style="margin-bottom: 20px">
-					<a href="1adi9dw1.html"><button class="btn waves-effect waves-light light-green" type="submit" name="action">Submit
-						<i class="mdi-content-send right"></i>
-					</button></a>
+					<button class="btn waves-effect waves-light light-green" name="action" id="copy-button" data-clipboard-text="editor.getSession().getValue()">Copy
+						<i class="mdi-content-content-copy"></i>
+					</button>
 				</div>
 			</div>
 		</main>
@@ -217,6 +208,7 @@ end</div>
 		<script src="js/materialize.js"></script>
 		<script src="js/custom-changes.js"></script>
 		<script src="plugins/ace/ace.js"></script>
+		<script src="plugins/zeroclipboard/ZeroClipboard.min.js"></script>
 		<script>
 			var editor = ace.edit("editor");
 			var theme = $("#theme-selector").val();
@@ -224,6 +216,7 @@ end</div>
 			editor.setTheme(theme);
 			editor.getSession().setMode("ace/mode/lua");
 			editor.setPrintMarginColumn(-1);
+			editor.setReadOnly(true);
 		</script>
 	</body>
 </html>

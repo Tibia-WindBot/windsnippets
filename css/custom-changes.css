@@ -10,12 +10,21 @@
 	margin-left: 250px;
 }
 
+#about a {
+	color: inherit;
+}
+
 /*
  *	Enables fixed navigation bar and footer
- *  Doesn't work for IE correctly
+ *  Doesn't work well for IE
  */
 
 body {
+	/* only for dark themes
+	 *
+	 * background-color: #272822;
+	 *
+	 */
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
