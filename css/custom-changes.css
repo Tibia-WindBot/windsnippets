@@ -1,17 +1,22 @@
 #editor {
-	margin-top: 10px;
-	width: 100%;
-	height: 400px;
-	margin-bottom: 10px;
+	margin-top:		10px;
+	width:		100%;
+	height:		400px;
+	margin-bottom:	10px;
 }
 
 #search-field {
-	max-width: 400px;
-	margin-left: 250px;
+	max-width:		400px;
+	margin-left:	250px;
 }
 
 #about a {
-	color: inherit;
+	color:		inherit;
+}
+
+[type="checkbox"]:checked + label:before {
+	border-right:	2px solid #8bc34a;
+	border-bottom:	2px solid #8bc34a;
 }
 
 /*
@@ -20,20 +25,13 @@
  */
 
 body {
-	/* only for dark themes
-	 *
-	 * background-color: #272822;
-	 *
-	 */
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
+	display:		flex;
+	min-height:		100vh;
+	flex-direction:	column;
+	zoom:			100%;
+    background-color: #202020;
 }
 
 main {
-	flex: 1 0 auto;
-}
-
-body {
-	zoom: 100%;
+	flex:			1 0 auto;
 }
